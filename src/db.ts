@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const dbURI: string = "mongodb://localhost:27017/preproot";
-// const dbURI: string = `mongodb://${process.env.mongoDBUser}:${process.env.mongoDBPassword}@${process.env.mongoDBIP}:${process.env.mongoDBPort}/${process.env.mongoDBName}`;
+// const dbURI: string = "mongodb://localhost:27017/preproot";
+const dbURI: string = `mongodb://${process.env.mongoDBUser}:${process.env.mongoDBPassword}@${process.env.mongoDBIP}:${process.env.mongoDBPort}/${process.env.mongoDBName}`;
 
 mongoose.set("strictQuery", false);
 
