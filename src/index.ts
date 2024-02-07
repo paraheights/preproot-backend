@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 /* Routes */
-app.use("/public", publicRouter);
+app.use("/preproot-api/public", publicRouter);
 
 /* Handlers */
 app.use(ApiErrorHandler);
