@@ -5,6 +5,8 @@ import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import bearerToken from "express-bearer-token";
+import { ApiErrorHandler } from "./utils/apiError";
+import { publicRouter } from "./routes/public.route";
 
 /* App Setup */
 const app = express();
@@ -18,8 +20,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 /* Routes */
+app.use("/public", publicRouter);
 
 /* Handlers */
+app.use(ApiErrorHandler);
 
 /* Listeners */
 mongoose.connection.once("open", () => {
