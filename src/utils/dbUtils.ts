@@ -32,12 +32,12 @@ const isValidMongooseId = (id: string): boolean => {
 
 export const dbSave = async (doc: Document): Promise<Result> => {
   try {
-    if (!isValidMongooseId(doc._id)) {
-      throw new CustomError({
-        status: 400,
-        message: "Not a valid mongoose document!",
-      });
-    }
+    // if (!isValidMongooseId(doc._id)) {
+    //   throw new CustomError({
+    //     status: 400,
+    //     message: "Not a valid mongoose document!",
+    //   });
+    // }
 
     const newDoc: Document = await doc.save();
 
